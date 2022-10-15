@@ -7,7 +7,7 @@
 #define Kp 10
 #define Ki 0
 #define MAX_ROC = 20
-#define SERVO_CONTROL_PERIOD 50
+
 
 Adafruit_ADXL345_Unified accel = Adafruit_ADXL345_Unified(12345);
 Servo servo;
@@ -18,8 +18,9 @@ float alpha = 0.1;
 float integral_term = 0;
 float pid_output;
 float current_servo_angle = 90;
+uint32_t servo_control_period = 0;
 elapsedMillis time_passed;
-elapsedMillis servo_control_period = SERVO_CONTROL_PERIOD;
+elapsedMillis servo_control_timer = 0;
 
 void setup() {
   if(!accel.begin())
@@ -39,9 +40,10 @@ void loop() {
   accel.getEvent(&event);
   pid_output = pid(event.acceleration.y);
   time_passed = 0;
-  if (servo_control_period > SERVO_CONTROL_PERIOD) {
+  if (servo_control_timer > servo_control_period) {
     rotate_servo();
-    servo_control_period = 0;
+    set_servo_control_period();
+    servo_control_timer = 0;
   }
   Serial.print("PI Output: "); Serial.println(pid_output);
   Serial.print("Current servo angle: "); Serial.println(current_servo_angle);
@@ -74,5 +76,14 @@ void rotate_servo() {
   }
   if (pid_output > 3) {
     servo.write(current_servo_angle += 1);
+  }
+}
+void set_servo_control_period() {
+  if (abs(pid_output) > 1000) {
+    servo_control_period = 1;
+  } else if (abs(pid_output) < 3) {
+    servo_control_period = 1000 / 3;
+  } else {
+    servo_control_period = 1000 / abs(pid_output);
   }
 }

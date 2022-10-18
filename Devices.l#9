@@ -108,7 +108,7 @@
 <wire x1="0" y1="-27.94" x2="0" y2="0" width="0.254" layer="94"/>
 <pin name="VDD" x="25.4" y="-2.54" length="short" direction="pwr" rot="R180"/>
 <pin name="GND" x="-2.54" y="-25.4" length="short" direction="pwr"/>
-<pin name="VDDIO" x="-2.54" y="-2.54" length="short"/>
+<pin name="VDDIO" x="0" y="-2.54" length="short"/>
 <pin name="AP_SLCK" x="-2.54" y="-5.08" length="short"/>
 <pin name="AP_SDO" x="-2.54" y="-7.62" length="short"/>
 <pin name="AP_SDI" x="-2.54" y="-10.16" length="short"/>
@@ -138,9 +138,7 @@
 <connect gate="G$1" pin="VDDIO" pad="VDDIO"/>
 </connects>
 <technologies>
-<technology name="">
-<attribute name="MPN" value="ICM-42605"/>
-</technology>
+<technology name=""/>
 </technologies>
 </device>
 </devices>

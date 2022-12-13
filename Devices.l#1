@@ -288,7 +288,7 @@
 </device>
 </devices>
 </deviceset>
-<deviceset name="CONNECTOR_3_?_*">
+<deviceset name="CONNECTOR_3_?_*" prefix="J">
 <gates>
 <gate name="G$1" symbol="CONNECTOR_03" x="0" y="0"/>
 </gates>

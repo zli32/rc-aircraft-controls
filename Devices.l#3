@@ -6,7 +6,7 @@
 <setting alwaysvectorfont="no"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="yes" altdistance="0.01" altunitdist="inch" altunit="inch"/>
+<grid distance="50" unitdist="mil" unit="mil" style="lines" multiple="1" display="yes" altdistance="5" altunitdist="mil" altunit="mil"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="yes" active="yes"/>
 <layer number="2" name="Route2" color="16" fill="1" visible="no" active="yes"/>
@@ -212,6 +212,20 @@
 <text x="0" y="1.4" size="0.8128" layer="21" font="vector" align="bottom-center">&gt;NAME</text>
 <rectangle x1="-2" y1="-2" x2="2" y2="2" layer="39"/>
 <rectangle x1="-2" y1="-2" x2="2" y2="2" layer="40"/>
+</package>
+<package name="TEENSY_SHORT">
+<description>3 pin 0.1 inch pitch through hole header footprint
+&lt;br&gt;
+&lt;a href="http://suddendocs.samtec.com/catalog_english/tsw_th.pdf"&gt;Samtec&lt;/a&gt;</description>
+<pad name="2" x="0" y="0" drill="1.016" rot="R180"/>
+<pad name="3" x="0" y="-2.54" drill="1.016" rot="R180"/>
+<pad name="1" x="0" y="2.54" drill="1.016" rot="R180"/>
+<wire x1="-1.27" y1="-4.064" x2="-1.27" y2="4.064" width="0.127" layer="21"/>
+<wire x1="-1.27" y1="4.064" x2="1.27" y2="4.064" width="0.127" layer="21"/>
+<wire x1="-1.27" y1="-4.064" x2="1.27" y2="-4.064" width="0.127" layer="21"/>
+<rectangle x1="-1.524" y1="-4.318" x2="1.524" y2="4.318" layer="39"/>
+<wire x1="1.27" y1="-4.064" x2="1.27" y2="4.064" width="0.127" layer="21"/>
+<rectangle x1="-1.524" y1="-4.318" x2="1.524" y2="4.318" layer="40"/>
 </package>
 </packages>
 <symbols>

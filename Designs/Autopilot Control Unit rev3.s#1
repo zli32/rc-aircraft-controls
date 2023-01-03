@@ -6066,9 +6066,9 @@ Requires ordering of:
 <label x="246.38" y="193.04" size="1.27" layer="95" xref="yes"/>
 </segment>
 <segment>
-<wire x1="114.3" y1="147.32" x2="116.84" y2="147.32" width="0.1524" layer="91"/>
-<label x="116.84" y="147.32" size="1.27" layer="95" xref="yes"/>
-<pinref part="A1" gate="G$1" pin="D6"/>
+<wire x1="114.3" y1="160.02" x2="116.84" y2="160.02" width="0.1524" layer="91"/>
+<label x="116.84" y="160.02" size="1.27" layer="95" xref="yes"/>
+<pinref part="A1" gate="G$1" pin="(SDO)D11"/>
 </segment>
 </net>
 <net name="ELEVATOR_CTRL" class="0">
@@ -6078,9 +6078,9 @@ Requires ordering of:
 <label x="246.38" y="157.48" size="1.27" layer="95" xref="yes"/>
 </segment>
 <segment>
-<wire x1="114.3" y1="152.4" x2="116.84" y2="152.4" width="0.1524" layer="91"/>
-<label x="116.84" y="152.4" size="1.27" layer="95" xref="yes"/>
-<pinref part="A1" gate="G$1" pin="D8"/>
+<wire x1="114.3" y1="154.94" x2="116.84" y2="154.94" width="0.1524" layer="91"/>
+<label x="116.84" y="154.94" size="1.27" layer="95" xref="yes"/>
+<pinref part="A1" gate="G$1" pin="D9"/>
 </segment>
 </net>
 <net name="RUDDER_CTRL" class="0">
@@ -6090,9 +6090,9 @@ Requires ordering of:
 <label x="246.38" y="139.7" size="1.27" layer="95" xref="yes"/>
 </segment>
 <segment>
-<wire x1="114.3" y1="154.94" x2="116.84" y2="154.94" width="0.1524" layer="91"/>
-<label x="116.84" y="154.94" size="1.27" layer="95" xref="yes"/>
-<pinref part="A1" gate="G$1" pin="D9"/>
+<wire x1="114.3" y1="152.4" x2="116.84" y2="152.4" width="0.1524" layer="91"/>
+<label x="116.84" y="152.4" size="1.27" layer="95" xref="yes"/>
+<pinref part="A1" gate="G$1" pin="D8"/>
 </segment>
 </net>
 <net name="GEAR_CTRL" class="0">
@@ -6102,9 +6102,9 @@ Requires ordering of:
 <label x="246.38" y="121.92" size="1.27" layer="95" xref="yes"/>
 </segment>
 <segment>
-<wire x1="114.3" y1="157.48" x2="116.84" y2="157.48" width="0.1524" layer="91"/>
-<label x="116.84" y="157.48" size="1.27" layer="95" xref="yes"/>
-<pinref part="A1" gate="G$1" pin="(CS)D10"/>
+<wire x1="114.3" y1="149.86" x2="116.84" y2="149.86" width="0.1524" layer="91"/>
+<label x="116.84" y="149.86" size="1.27" layer="95" xref="yes"/>
+<pinref part="A1" gate="G$1" pin="D7"/>
 </segment>
 </net>
 <net name="AUX_CTRL" class="0">
@@ -6114,9 +6114,16 @@ Requires ordering of:
 <label x="246.38" y="104.14" size="1.27" layer="95" xref="yes"/>
 </segment>
 <segment>
-<wire x1="114.3" y1="160.02" x2="116.84" y2="160.02" width="0.1524" layer="91"/>
-<label x="116.84" y="160.02" size="1.27" layer="95" xref="yes"/>
-<pinref part="A1" gate="G$1" pin="(SDO)D11"/>
+<wire x1="114.3" y1="147.32" x2="116.84" y2="147.32" width="0.1524" layer="91"/>
+<label x="116.84" y="147.32" size="1.27" layer="95" xref="yes"/>
+<pinref part="A1" gate="G$1" pin="D6"/>
+</segment>
+</net>
+<net name="AIRLERON_CTRL" class="0">
+<segment>
+<pinref part="J9" gate="G$1" pin="1"/>
+<wire x1="236.22" y1="175.26" x2="246.38" y2="175.26" width="0.1524" layer="91"/>
+<label x="246.38" y="175.26" size="1.27" layer="95" xref="yes"/>
 </segment>
 </net>
 <net name="SDA" class="0">
@@ -6150,9 +6157,9 @@ Requires ordering of:
 <label x="177.8" y="154.94" size="1.27" layer="95" xref="yes"/>
 </segment>
 <segment>
-<wire x1="88.9" y1="142.24" x2="86.36" y2="142.24" width="0.1524" layer="91"/>
-<label x="86.36" y="142.24" size="1.27" layer="95" rot="R180" xref="yes"/>
-<pinref part="A1" gate="G$1" pin="A8"/>
+<wire x1="88.9" y1="144.78" x2="86.36" y2="144.78" width="0.1524" layer="91"/>
+<label x="86.36" y="144.78" size="1.27" layer="95" rot="R180" xref="yes"/>
+<pinref part="A1" gate="G$1" pin="A7"/>
 </segment>
 </net>
 <net name="ADDR" class="0">
@@ -6162,9 +6169,9 @@ Requires ordering of:
 <label x="177.8" y="152.4" size="1.27" layer="95" xref="yes"/>
 </segment>
 <segment>
-<wire x1="88.9" y1="144.78" x2="86.36" y2="144.78" width="0.1524" layer="91"/>
-<label x="86.36" y="144.78" size="1.27" layer="95" rot="R180" xref="yes"/>
-<pinref part="A1" gate="G$1" pin="A7"/>
+<wire x1="88.9" y1="142.24" x2="86.36" y2="142.24" width="0.1524" layer="91"/>
+<label x="86.36" y="142.24" size="1.27" layer="95" rot="R180" xref="yes"/>
+<pinref part="A1" gate="G$1" pin="A8"/>
 </segment>
 </net>
 <net name="!RST" class="0">
@@ -6181,14 +6188,9 @@ Requires ordering of:
 </net>
 <net name="AILERON_CTRL" class="0">
 <segment>
-<wire x1="114.3" y1="149.86" x2="116.84" y2="149.86" width="0.1524" layer="91"/>
-<label x="116.84" y="149.86" size="1.27" layer="95" xref="yes"/>
-<pinref part="A1" gate="G$1" pin="D7"/>
-</segment>
-<segment>
-<pinref part="J9" gate="G$1" pin="1"/>
-<wire x1="236.22" y1="175.26" x2="246.38" y2="175.26" width="0.1524" layer="91"/>
-<label x="246.38" y="175.26" size="1.27" layer="95" xref="yes"/>
+<wire x1="114.3" y1="157.48" x2="116.84" y2="157.48" width="0.1524" layer="91"/>
+<label x="116.84" y="157.48" size="1.27" layer="95" xref="yes"/>
+<pinref part="A1" gate="G$1" pin="(CS)D10"/>
 </segment>
 </net>
 </nets>

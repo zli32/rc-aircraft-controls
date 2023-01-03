@@ -3,7 +3,7 @@
 <eagle version="9.6.2">
 <drawing>
 <settings>
-<setting alwaysvectorfont="yes"/>
+<setting alwaysvectorfont="no"/>
 <setting verticaltext="up"/>
 </settings>
 <grid distance="10" unitdist="mil" unit="mil" style="lines" multiple="1" display="yes" altdistance="1" altunitdist="mil" altunit="mil"/>
@@ -197,14 +197,14 @@
 <wire x1="0" y1="37.262" x2="0" y2="0" width="0" layer="20"/>
 <text x="0.762" y="19.05" size="0.762" layer="25" font="vector" rot="R90" align="top-center">Autopilot Control Unit Rev3
 Zekun Li</text>
-<text x="9.906" y="3.81" size="1.778" layer="25" font="vector">+</text>
+<text x="11.176" y="3.81" size="1.778" layer="26" font="vector" rot="MR0">+</text>
 <text x="33.274" y="3.81" size="1.778" layer="25" font="vector">+</text>
-<text x="61.722" y="4.064" size="1.778" layer="25" font="vector" rot="R90">+</text>
+<text x="60.198" y="3.81" size="1.778" layer="26" font="vector" rot="MR90">+</text>
 <text x="38.1" y="3.81" size="1.778" layer="25" font="vector" rot="R90">+</text>
 <text x="38.1" y="9.652" size="1.778" layer="25" font="vector" rot="R180">-</text>
-<text x="61.468" y="9.652" size="1.778" layer="25" font="vector" rot="R180">-</text>
+<text x="60.198" y="9.652" size="1.778" layer="26" font="vector" rot="MR180">-</text>
 <text x="11.176" y="9.652" size="1.778" layer="25" font="vector" rot="R180">-</text>
-<text x="34.544" y="9.652" size="1.778" layer="25" font="vector" rot="R180">-</text>
+<text x="33.274" y="9.652" size="1.778" layer="26" font="vector" rot="MR180">-</text>
 </plain>
 <libraries>
 <library name="HyTechDevices">
@@ -779,9 +779,9 @@ Source: &lt;a href=&quot;https://jlcpcb.com/capabilities/Capabilities&quot;&gt;J
 <contactref element="A1" pad="VIN"/>
 <contactref element="U2" pad="3"/>
 <contactref element="C5" pad="1"/>
-<wire x1="9.84" y1="11.136" x2="9.84" y2="12.004" width="0.508" layer="1"/>
-<wire x1="9.84" y1="12.004" x2="8.89" y2="12.954" width="0.508" layer="1"/>
-<wire x1="8.89" y1="12.954" x2="8.89" y2="14.986" width="0.508" layer="1"/>
+<wire x1="9.84" y1="11.136" x2="9.84" y2="12.258" width="0.508" layer="1"/>
+<wire x1="9.84" y1="12.258" x2="8.89" y2="13.208" width="0.508" layer="1"/>
+<wire x1="8.89" y1="13.208" x2="8.89" y2="14.986" width="0.508" layer="1"/>
 <wire x1="8.89" y1="14.986" x2="8.636" y2="15.24" width="0.508" layer="1"/>
 <wire x1="8.636" y1="15.24" x2="7.62" y2="15.24" width="0.508" layer="1"/>
 <wire x1="7.62" y1="15.24" x2="6.858" y2="16.002" width="0.508" layer="1"/>
@@ -1084,10 +1084,10 @@ Source: &lt;a href=&quot;https://jlcpcb.com/capabilities/Capabilities&quot;&gt;J
 <signal name="!RST">
 <contactref element="U1" pad="10"/>
 <contactref element="A1" pad="D20"/>
-<wire x1="23.876" y1="33.528" x2="24.21715625" y2="33.528" width="0.254" layer="1"/>
-<wire x1="24.21715625" y1="33.528" x2="25.74115625" y2="35.052" width="0.254" layer="1"/>
-<wire x1="58.166" y1="35.052" x2="64.008" y2="29.21" width="0.254" layer="1"/>
-<wire x1="25.74115625" y1="35.052" x2="58.166" y2="35.052" width="0.254" layer="1"/>
+<wire x1="23.876" y1="33.528" x2="24.97915625" y2="33.528" width="0.254" layer="1"/>
+<wire x1="24.97915625" y1="33.528" x2="25.99515625" y2="34.544" width="0.254" layer="1"/>
+<wire x1="58.674" y1="34.544" x2="64.008" y2="29.21" width="0.254" layer="1"/>
+<wire x1="25.99515625" y1="34.544" x2="58.674" y2="34.544" width="0.254" layer="1"/>
 </signal>
 <signal name="AILERON_CTRL">
 <contactref element="A1" pad="D7"/>

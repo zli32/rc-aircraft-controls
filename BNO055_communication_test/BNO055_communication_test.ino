@@ -1,3 +1,5 @@
+// https://www.andre-gaschler.com/rotationconverter/
+
 #include <Wire.h>
 #include "bno055.h"
 

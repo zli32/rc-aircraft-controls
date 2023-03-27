@@ -1,14 +1,33 @@
 #include <Wire.h>
+#include <Servo.h>
 #include <elapsedMillis.h>
 #include "bno055.h"
 
 #define ADDRESS_PIN 21
 #define INT_PIN 22
 
+// In degrees
+#define MAX_AILERON_DEFLECTION 10
+#define MAX_ELEVATOR_DEFLECTION 10
+#define MAX_RUDDER_DEFLECTION 10
+#define MIN_THROTTLE_LEVEL 50
+#define MAX_THROTTLE_LEVEL 100
+
+#define PRINT_INTERVAL 200
+
 struct bno055_t orientation_sensor;
 struct bno055_quaternion_t quaternion_data;
 struct bno055_euler_float_t eulerData;
-ellapsedMillis print_timer;
+
+Servo aileron_servo;
+Servo elevator_servo;
+Servo rudder_servo;
+
+elapsedMillis aileron_time_passed = 0;
+elapsedMillis elevator_time_passed = 0;
+elapsedMillis rudder_time_passed = 0;
+elapsedMillis throttle_time_passed = 0;
+elapsedMillis print_timer = 0;
 
 u8 operation_mode = 0;
 u8 power_mode = 0;
@@ -39,6 +58,14 @@ void setup() {
 void loop() {
   // put your main code here, to run repeatedly:
   bno055_convert_float_euler_hpr_deg(&eulerData);
+  data_debug_print();
+}
+
+float pi(float process_var, int kp, int ki, elapsedMillis *time_passed) {
+  float error = PID_SETPOINT - process_var;
+  integral_term += error * *time_passed;
+  *time_passed = 0;
+  return kp * (error) + ki * (integral_term);
 }
 
 s8 bno055_write(u8 dev_addr, u8 reg_addr, u8 * reg_data, u8 wr_len) {
@@ -60,7 +87,6 @@ s8 bno055_read(u8 dev_addr, u8 reg_addr, u8 * reg_data, u8 r_len) {
     reg_data[index] = data;
     index++;
   }
-  Serial.println();
   return 0;
 }
 
@@ -69,7 +95,7 @@ void delay_wrapper(u32 ms) {
 }
 
 void data_debug_print() {
-  if (print_timer > 200) {
+  if (print_timer > PRINT_INTERVAL) {
     Serial.println("Euler Data:");
     Serial.print("h: "); Serial.print(eulerData.h); Serial.print("\t");
     Serial.print("r: "); Serial.print(eulerData.r); Serial.print("\t");
